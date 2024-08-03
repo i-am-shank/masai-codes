@@ -1,0 +1,7 @@
+01. Address operator (&)
+02. Pointers (*)
+03. Stack & Heap memory
+04. Dynamic Allocation   --   Arrays
+
+05. Function
+06. Recursion
