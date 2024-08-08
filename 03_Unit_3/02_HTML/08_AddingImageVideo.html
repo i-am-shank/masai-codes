@@ -1,0 +1,45 @@
+<!-- 
+Problem statement : Create a webpage that has an image and a video that can be played.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Image & Video</title>
+    </head>
+    <body>
+        <section>
+            <h1>Image :</h1>
+            <img
+                src="https://images.livemint.com/img/2022/01/18/1140x641/2021-08-07T113256Z_809576440_SP1EH870W2T9I_RTRMADP_3_OLYMPICS-2020-ATH-M-JAVELIN-FNL_1628339341789_1642513238818.JPG"
+                alt=""
+                width="200"
+            />
+        </section>
+
+        <section>
+            <h1>Youtube video :</h1>
+            <iframe
+                width="350"
+                height="200"
+                src="https://www.youtube.com/embed/ke8b60x_IpQ?si=-aP_jl2qjQbLM17j"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+            ></iframe>
+        </section>
+
+        <section>
+            <h1>Local video file :</h1>
+            <video
+                src="media-files/neeraj-chopra-qualifier-throw.mp4"
+                controls
+                width="30%"
+            ></video>
+        </section>
+    </body>
+</html>

@@ -1,0 +1,38 @@
+<!-- 
+Problem statement : Implement a clear and intuitive navigation menu that allows users to easily move between different sections of the exhibit. Consider using ARIA attributes (e.g., aria-label, aria-current) to enhance the acessibility of the navigation.
+-->
+
+<!-- All the navigation-link pages are kept in "./nav-files" directory -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            #nav-bar {
+                width: 80%;
+            }
+            .nav-link {
+                margin-right: 15px;
+            }
+        </style>
+    </head>
+    <body>
+        <nav id="nav-bar">
+            <span class="nav-link">
+                <a href=".">Home</a>
+            </span>
+            <span class="nav-link">
+                <a href="./nav-files/contact-us.html">Contact Us</a>
+            </span>
+            <span class="nav-link">
+                <a href="./nav-files/login.html"> Login </a>
+            </span>
+            <span class="nav-link">
+                <a href="./nav-files/signup.html">Sign Up</a>
+            </span>
+        </nav>
+    </body>
+</html>
