@@ -1,0 +1,183 @@
+<!-- 
+Problem Statement :
+Explore the picture element and define multiple sources for responsive images. Try to figure out how it can affect the web vitals score of the page.
+-->
+
+<!-- 
+
+####  Core Web Vitals :- 
+
+
+Metrics of Core Web Vitals :-
+  ==>   CLS (Cumulative Layout Shift)   ->   How much   shifting is happening while loading of the page. In case of images, this won't happen if width & height is provided.
+  ==>   LCP (Largest Contentful Paint)   ->   How much time is taken by largest element of the page to load. 
+      Good LCP score  =  upto 2.5 sec.
+      Needs improvement  =  upto 4 sec.
+      Poor  =  anything more than 4 sec.
+  ==>   FID (First Input Delay)   ->   When an input element or a link is clicked, how much time it takes to process that click. 100 miliseconds should be the target of first input delay for good user experience.
+  ==>   
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Web Vitals assignment</title>
+
+        <style>
+            main {
+                display: flex;
+            }
+            section {
+                text-align: center;
+            }
+            .conclusions {
+                text-align: left;
+                margin-left: 2.5%;
+                width: 90%;
+            }
+            footer {
+                margin-bottom: 5%;
+                margin-left: 2.5%;
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <section>
+                <h1>
+                    There were 8 images in a webpage, without height & width
+                    attributes
+                </h1>
+                <div>
+                    <img src="media/Images_without_height_width.png" alt="Web
+                    Vitals Report of 8 images in a webpage without height &
+                    width attributes." width="95%" height="50%"
+                </div>
+                <div class="conclusions">
+                    <h3>Conclusions :</h3>
+                    <ul>
+                        <li>
+                            There was significant decline in performance of the
+                            webpage (rated : 69).
+                        </li>
+                        <li>
+                            There was a big CLS (Cumulative Layout Shift), which
+                            happens due to shift in layout while loading.
+                        </li>
+                        <li>
+                            CLS happened, because browser decided the layout of
+                            webpage at runtime, by figuring out original
+                            dimension of each image.
+                        </li>
+                        <li>
+                            Also images were by default large in dimension, so
+                            they took a little longer to load, i.e. more LCP
+                            (Largest Contentful Paint).
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h1>
+                    There were 8 images in a webpage, with defined height &
+                    width attributes
+                </h1>
+                <div>
+                    <img src="media/Images_with_height_width.png" alt="Web
+                    Vitals Report of 8 images in a webpage with height & width
+                    attributes." width="95%" height="50%"
+                </div>
+                <div class="conclusions">
+                    <h3>Conclusions</h3>
+                    <ul>
+                        <li>
+                            Performance boosted just by giving each image a
+                            fixed height & width, in relative or absolute unit.
+                        </li>
+                        <li>
+                            CLS just dropped to 0, as every thing in layout was
+                            pre-defined, due to provided dimensions of images.
+                        </li>
+                        <li>
+                            Gave images a smaller dimension, so they took little
+                            less time to load. So slightly smaller LCP (Largest
+                            Contentful Paint).
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <h1>What is Web Vitals ?</h1>
+            <ul>
+                <li>
+                    Google considers it as a comparison metric to rank 2
+                    webpages.
+                </li>
+                <li>
+                    Most priority is given to the content of the websites, but
+                    if two websites have same or similar content, then web
+                    vitals is used to rank them.
+                </li>
+                <li>
+                    <h4>Core Web Vitals metrics :</h4>
+                    <ol type="i">
+                        <li>
+                            <i>CLS (Cumulative Layout Shift)</i>
+                            <p>
+                                How much shifting is happening while loading of
+                                the page. In case of images, this won't happen
+                                if width & height is provided.
+                            </p>
+                        </li>
+                        <li>
+                            <i>LCP (Largest Contentful Paint)</i>
+                            <div>
+                                <p>
+                                    It states that how much time is taken by the
+                                    largest element of the webpage to load.
+                                </p>
+                                <ul type="circle">
+                                    <li>Good LCP score = upto 2.5 sec.</li>
+                                    <li>Needs improvement = upto 4 sec.</li>
+                                    <li>Poor = anything more than 4 sec.</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <i>FID (First Input Delay)</i>
+                            <p>
+                                When an input element or a link is clicked, how
+                                much time it takes to process that click. 100
+                                miliseconds should be the target of first input
+                                delay for good user experience.
+                            </p>
+                        </li>
+                    </ol>
+                </li>
+            </ul>
+
+            <div>
+                <h5>For more information about web vitals, refer :</h5>
+
+                <ul type="circle">
+                    <li>
+                        <a href="https://web.dev/articles/vitals"
+                            >web.dev - blog</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="https://www.dreamhost.com/blog/improve-core-web-vitals/"
+                            >dreamhost.com - blog</a
+                        >
+                    </li>
+                </ul>
+            </div>
+        </footer>
+    </body>
+</html>

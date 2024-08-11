@@ -1,0 +1,38 @@
+<!-- 
+Problem statement : Explain how to use the meta tag to create a redirection in HTML. Provide an example of a meta tag that redirects the user to Masai School's investors page after a delay of 10 seconds.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Meta Tag</title>
+        <!-- Redirects page to given url, after 10 seconds. -->
+        <meta
+            http-equiv="refresh"
+            content="10;url=https://www.masaischool.com/our-investors"
+        />
+    </head>
+    <body>
+        <div>
+            <p>
+                To use meta tag for redirection, we can use do following things
+                :
+            </p>
+            <ul>
+                <li>http-equiv attribute of meta tag with value "refresh"</li>
+                <li>
+                    and content attribute with a string having some positive
+                    integer followed by ";url=" followed by a valid url.
+                </li>
+            </ul>
+        </div>
+        <div>
+            <h1>
+                This page will redirect to Masai investors website in 10
+                seconds.
+            </h1>
+        </div>
+    </body>
+</html>

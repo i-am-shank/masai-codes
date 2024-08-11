@@ -1,0 +1,52 @@
+<!-- 
+Selectors :  (used in selecting & processing HTML-elements in CSS or JavaScript)
+
+1. Type selector / Tag-name selector (tag-name)
+2. Class seletor  (.)    =>  selecting multiple elements, to perform similar tasks on them
+3. id selector  (#)  =>>  unique for each HTML element
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            /* class selector */
+            .header {
+                color: blue;
+            }
+            .mid-text {
+                font-style: italic;
+            }
+            .end-text {
+                font-family: "Trebuchet MS", "Lucida Sans Unicode",
+                    "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+            }
+            /* type selector */
+            p {
+                background-color: yellow;
+            }
+            /* id selector */
+            #para2 {
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h1 class="header end-text" id="header-1">Selector demo</h1>
+            <h3 class="header mid-text" id="header-2">
+                Trying out different selectors
+            </h3>
+
+            <p id="para1" class="para mid-text">This is 1st paragraph.</p>
+
+            <p id="para2" class="para end-text">This is 2nd paragraph</p>
+
+            <p>Another para</p>
+            <h2>heading 2</h2>
+        </div>
+    </body>
+</html>
