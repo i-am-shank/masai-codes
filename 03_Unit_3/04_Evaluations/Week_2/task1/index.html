@@ -1,0 +1,801 @@
+<!--
+Clone of this website :
+https://themewagon.github.io/collab/v1.0.0/ 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+
+        <style>
+            * {
+                font-family: sans-serif;
+                width: 100%;
+            }
+            #header-wrapper {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 5%;
+                margin-top: 1%;
+            }
+            #header {
+                display: flex;
+                width: 90%;
+            }
+            #navbar {
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+                align-items: center;
+            }
+            #nav-links {
+                display: flex;
+                list-style: none;
+            }
+            #nav-links li {
+                margin-right: 5%;
+            }
+            #nav-links li a {
+                color: gray;
+                font-weight: bolder;
+            }
+            a {
+                text-decoration: none;
+            }
+            #nav-btns {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 10%;
+            }
+            .nav-btn1 {
+                /* margin-right: 1%; */
+                color: #fe9a52;
+            }
+            .button {
+                color: #fff;
+                background-image: linear-gradient(50deg, #fe9a52, #ff5748);
+                text-align: center;
+                vertical-align: middle;
+                cursor: pointer;
+                user-select: none;
+                background-color: transparent;
+                border: 1px solid transparent;
+                padding: 0.7rem 1.5rem;
+                font-size: 1rem;
+                border-radius: 0.313rem;
+                text-transform: uppercase;
+                font-weight: bold;
+            }
+            .white-button {
+                color: #fe9a52;
+                font-weight: 700;
+                background-color: transparent;
+                text-align: center;
+                vertical-align: middle;
+                font-size: 1rem;
+                user-select: none;
+                cursor: pointer;
+                border-radius: 0.313rem;
+                border: 1px solid #fe9a52;
+                text-transform: uppercase;
+                font-weight: bold;
+                padding: 0.7rem 1.5rem;
+            }
+            .uppercase {
+                text-transform: uppercase;
+            }
+            /* platform section -------------------------------- */
+            .platform-top-text {
+                color: gray;
+                opacity: 0.8;
+            }
+            #platform-section-wrapper {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            #platform-section {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 90%;
+            }
+            .platform-section-child {
+                width: 45%;
+            }
+            /* social media section ---------------------------- */
+            #social-media-section-wrapper {
+                margin-top: 10%;
+                margin-bottom: 10%;
+                background-color: #fff0e5;
+                padding-top: 5%;
+                padding-bottom: 5%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+            }
+            #social-media-section {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 85%;
+            }
+            .media-section-logo {
+                display: inline;
+                width: 15%;
+            }
+            /* partnership section ----------------------------- */
+            #partnership-section-wrapper {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            #partnership-section {
+                width: 90%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            #partnership-section-left {
+                width: 35%;
+            }
+            #partnership-section-right {
+                width: 50%;
+            }
+            .partnership-top-text {
+                color: #5426e2;
+            }
+            #partnership-btns {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+            }
+            .partnership-btn {
+                width: 40%;
+            }
+            /* card footer section --------------------------- */
+            .card-footer-section-wrapper {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            #card-footer-section {
+                width: 90%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .card {
+                display: inline;
+            }
+            .card-logo-wrapper {
+                background-color: #ffecea;
+                width: 15%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 20%;
+            }
+            .card-logo {
+                color: #fd7d72;
+                padding: 5% 5%;
+            }
+
+            /* card footer section 2 ------------------------- */
+            .card-footer-section-wrapper-2 {
+                background-color: #fff8f1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .card-logo-wrapper-2 {
+                background-color: white;
+                width: 15%;
+            }
+            .card-logo-2 {
+                color: #fe9a52;
+                padding: 5%;
+            }
+
+            /* corroboration section --------------------------- */
+            #corroboration-section-wrapper {
+                background-color: #fff8f1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            #corroboration-section {
+                width: 90%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            #corroboration-section-left {
+                width: 50%;
+            }
+            #corroboration-section-right {
+                width: 35%;
+            }
+
+            /* review section ----------------------------------------- */
+            #review-section-wrapper {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            #review-section {
+                width: 90%;
+            }
+            .review-row {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .review-card {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                height: 40%;
+            }
+            .review-card-text {
+                width: 150%;
+            }
+            .review-image {
+                width: 15%;
+            }
+            .quote-icon {
+                color: #ff6d4b;
+            }
+
+            /* collaborate section ------------------------------------ */
+            #collaborate-section-wrapper {
+                background: linear-gradient(
+                    274.74deg,
+                    #ffecd7 9.5%,
+                    rgba(255, 236, 215, 0) 100.79%
+                );
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            #collaborate-section {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 90%;
+                gap: 10%;
+            }
+            #collaborate-text {
+                color: #5426e2;
+            }
+
+            /* FAQ section -------------------------------------- */
+            #faq-section-wrapper {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            #faq-section {
+                width: 80%;
+            }
+            #faq-section-heading {
+                text-align: center;
+                font-size: 2.5rem;
+            }
+            .faq-question {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrapper">
+            <!-- header -->
+            <header id="header-wrapper">
+                <section id="header">
+                    <!-- image -->
+                    <img src="media/logo.png" alt="Collab" />
+                    <!-- navbar -->
+                    <nav id="navbar">
+                        <!-- links -->
+                        <ul id="nav-links">
+                            <li>
+                                <a href="">Products</a>
+                            </li>
+                            <li>
+                                <a href="">UseCases</a>
+                            </li>
+                            <li>
+                                <a href="">Developers</a>
+                            </li>
+                            <li>
+                                <a href="">Pricing</a>
+                            </li>
+                        </ul>
+
+                        <!-- buttons -->
+
+                        <span id="nav-btns">
+                            <a href="" class="nav-btn1"> Sign&nbsp;in</a>
+                            <button type="submit" class="button nav-btn2">
+                                TRY FOR FREE
+                            </button>
+                        </span>
+                    </nav>
+                </section>
+            </header>
+
+            <!-- main -->
+            <main>
+                <!-- platform section -->
+                <section id="platform-section-wrapper">
+                    <section id="platform-section">
+                        <div
+                            id="platform-section-left"
+                            class="platform-section-child"
+                        >
+                            <h5 class="uppercase platform-top-text">
+                                Top Business App
+                            </h5>
+                            <h1>The plaform for better cooperation</h1>
+                            <p>
+                                Crafted with care & creativity. Brings together
+                                everthing in one place.
+                            </p>
+                            <div id="platform-btns">
+                                <button type="submit" class="button">
+                                    <i
+                                        class="fa fa-download"
+                                        aria-hidden="true"
+                                    ></i>
+                                    <span> Download </span>
+                                </button>
+                                <button type="submit" class="white-button">
+                                    <i class="fa-solid fa-play"></i>
+                                    <span> Try for Free </span>
+                                </button>
+                            </div>
+                        </div>
+                        <div
+                            id="platform-section-right"
+                            class="platform-section-child"
+                        >
+                            <img src="media/hero-header.gif" alt="gif" />
+                        </div>
+                    </section>
+                </section>
+
+                <!-- social media logos section -->
+                <section id="social-media-section-wrapper">
+                    <section id="social-media-section">
+                        <img
+                            src="media/netflix.png"
+                            alt=""
+                            class="media-section-logo"
+                        />
+                        <img
+                            src="media/facebook.png"
+                            alt=""
+                            class="media-section-logo"
+                        />
+                        <img
+                            src="media/freelancer.png"
+                            alt=""
+                            class="media-section-logo"
+                        />
+                        <img
+                            src="media/mailbluster.png"
+                            alt=""
+                            class="media-section-logo"
+                        />
+                        <img
+                            src="media/theme-wagon.png"
+                            alt=""
+                            class="media-section-logo"
+                        />
+                    </section>
+                </section>
+
+                <!-- partnership section -->
+                <section id="partnership-section-wrapper">
+                    <section id="partnership-section">
+                        <div id="partnership-section-left">
+                            <img src="media/partnership.png" alt="" />
+                        </div>
+                        <div id="partnership-section-right">
+                            <h5 class="uppercase partnership-top-text">
+                                Partnership
+                            </h5>
+                            <h1>Build strong partnership & organizations</h1>
+                            <p>
+                                Bring all your document under one place and make
+                                it easy to share with other in no time. That
+                                makes the whole process comfortable.
+                            </p>
+                            <div id="partnership-btns">
+                                <button
+                                    type="submit"
+                                    class="button partnership-btn"
+                                >
+                                    <span> Learn more </span>
+                                </button>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+
+                <!-- card footer section - 1 -->
+                <div class="card-footer-section-wrapper">
+                    <section id="card-footer-section">
+                        <div class="card">
+                            <!-- logo -->
+                            <div class="card-footer-logo">
+                                <div class="card-logo-wrapper">
+                                    <i
+                                        class="fa-regular fa-pen-to-square card-logo"
+                                    ></i>
+                                </div>
+                            </div>
+
+                            <!-- content -->
+                            <div class="card-content">
+                                <h2>Write it up</h2>
+                                <p>
+                                    Communicating through video on elaborate
+                                    workflow and understanding.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <!-- logo -->
+                            <div class="card-footer-logo">
+                                <div class="card-logo-wrapper">
+                                    <i
+                                        class="fa-solid fa-desktop card-logo"
+                                    ></i>
+                                </div>
+                            </div>
+
+                            <!-- content -->
+                            <div>
+                                <h2>Show to others menu</h2>
+                                <p>
+                                    Stay communicated with all the colleagues
+                                    and brush up your social skill.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <!-- logo -->
+                            <div class="card-footer-logo">
+                                <div class="card-logo-wrapper">
+                                    <i class="fa-solid fa-cloud card-logo"></i>
+                                </div>
+                            </div>
+
+                            <!-- content -->
+                            <div>
+                                <h2>Storing at the cloud</h2>
+                                <p>
+                                    Click it and share the top quality images to
+                                    all the member of your group.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- corroboration section -->
+                <section id="corroboration-section-wrapper">
+                    <section id="corroboration-section">
+                        <div id="corroboration-section-left">
+                            <h5 class="uppercase partnership-top-text">
+                                Corroboration
+                            </h5>
+                            <h1>
+                                Keeping All Elements Together To Present The
+                                Project
+                            </h1>
+                            <p>
+                                While the project is shared between several
+                                members, the resources need to be at one place
+                                to maintain the clarity of the project, and
+                                flexibility among developers.
+                            </p>
+                            <div id="partnership-btns">
+                                <button
+                                    type="submit"
+                                    class="button partnership-btn"
+                                >
+                                    <span> Learn more </span>
+                                </button>
+                            </div>
+                        </div>
+                        <div id="corroboration-section-right">
+                            <img src="media/corroboration.png" alt="" />
+                        </div>
+                    </section>
+                </section>
+
+                <!-- card footer section - 2 -->
+                <div class="card-footer-section-wrapper-2">
+                    <section id="card-footer-section">
+                        <div class="card">
+                            <!-- logo -->
+                            <div class="card-footer-logo">
+                                <div class="card-logo-wrapper-2">
+                                    <i
+                                        class="fa-solid fa-video card-logo-2"
+                                    ></i>
+                                </div>
+                            </div>
+
+                            <!-- content -->
+                            <div class="card-content">
+                                <h2>Write it up</h2>
+                                <p>
+                                    Communicating through video on elaborate
+                                    workflow and understanding.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <!-- logo -->
+                            <div class="card-footer-logo">
+                                <div class="card-logo-wrapper-2">
+                                    <i
+                                        class="fa-brands fa-rocketchat card-logo-2"
+                                    ></i>
+                                </div>
+                            </div>
+
+                            <!-- content -->
+                            <div>
+                                <h2>Show to others menu</h2>
+                                <p>
+                                    Stay communicated with all the colleagues
+                                    and brush up your social skill.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <!-- logo -->
+                            <div class="card-footer-logo">
+                                <div class="card-logo-wrapper-2">
+                                    <i
+                                        class="fa-regular fa-image card-logo-2"
+                                    ></i>
+                                </div>
+                            </div>
+
+                            <!-- content -->
+                            <div>
+                                <h2>Storing at the cloud</h2>
+                                <p>
+                                    Click it and share the top quality images to
+                                    all the member of your group.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- review-section -->
+                <section id="review-section-wrapper">
+                    <section id="review-section">
+                        <div class="review-row">
+                            <div class="review-card">
+                                <!-- image -->
+                                <img
+                                    src="media/testimonial-1.png"
+                                    class="review-image"
+                                    alt=""
+                                />
+                                <!-- quote icon -->
+                                <i
+                                    class="fa-solid fa-quote-left quote-icon"
+                                ></i>
+                                <!-- text -->
+                                <div class="review-card-text">
+                                    <p class="review-para">
+                                        It would be only imprudent if you dont
+                                        grab this app now and use it at its
+                                        best, with all the great facilities it
+                                        got.”
+                                    </p>
+                                    <div class="review-credits">
+                                        <p class="review-name">
+                                            Safira Petterson
+                                        </p>
+                                        <p class="review-post">
+                                            Director, Plugbase
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="review-card">
+                                <!-- image -->
+                                <img
+                                    src="media/testimonial-2.png"
+                                    alt=""
+                                    class="review-image"
+                                />
+                                <!-- quote icon -->
+                                <i
+                                    class="fa-solid fa-quote-left quote-icon"
+                                ></i>
+                                <!-- text -->
+                                <div class="review-card-text">
+                                    <p class="review-para">
+                                        Myriad options and brillant outlook:
+                                        what more I can ask for? I trust this
+                                        app for it well furnished features and
+                                        reliable modeling. The best of all is it
+                                        got the option of scalability which
+                                        opens up a big window of opportunity. It
+                                        is the tool of future.”
+                                    </p>
+                                    <div class="review-credits">
+                                        <p class="review-name">Nazip Terasi</p>
+                                        <p class="review-post">
+                                            CEO, FrankPhoto
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="review-row">
+                            <div class="review-card">
+                                <!-- image -->
+                                <img
+                                    src="media/testimonial-3.png"
+                                    alt=""
+                                    class="review-image"
+                                />
+                                <!-- quote icon -->
+                                <i
+                                    class="fa-solid fa-quote-left quote-icon"
+                                ></i>
+                                <!-- text -->
+                                <div class="review-card-text">
+                                    <p class="review-para">
+                                        From the production to deployment, this
+                                        one is an absolute marvel to be work
+                                        with. Give it your shot so that you
+                                        don’t regret ”
+                                    </p>
+                                    <div class="review-credits">
+                                        <p class="review-name">Manion Potter</p>
+                                        <p class="review-post">
+                                            Senior Engineer, ArtsyCode
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="review-card">
+                                <!-- image -->
+                                <img
+                                    src="media/testimonial-4.png"
+                                    alt=""
+                                    class="review-image"
+                                />
+                                <!-- quote icon -->
+                                <i
+                                    class="fa-solid fa-quote-left quote-icon"
+                                ></i>
+                                <!-- text -->
+                                <div class="review-card-text">
+                                    <p class="review-para">
+                                        The app totally surprised me with its
+                                        well planned designs and fine structured
+                                        build-up. For a brilliant team-work,
+                                        this one is a perfect choice. ”
+                                    </p>
+                                    <div class="review-credits">
+                                        <p class="review-name">
+                                            Frankistain Belio
+                                        </p>
+                                        <p class="review-post">CTO, NerdBean</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+
+                <!-- collaboration-section -->
+                <section id="collaborate-section-wrapper">
+                    <section id="collaborate-section">
+                        <div id="collaborate-section-left">
+                            <img src="media/cta.png" alt="" />
+                        </div>
+                        <div id="collaborate-section-right">
+                            <h1 id="collaborate-text">
+                                Collaborate with theteam free of cost
+                            </h1>
+                            <button
+                                type="submit"
+                                class="button collaborate-btn"
+                            >
+                                Try For Free
+                            </button>
+                        </div>
+                    </section>
+                </section>
+
+                <!-- FAQ-section -->
+                <section id="faq-section-wrapper">
+                    <section id="faq-section">
+                        <h1 id="faq-section-heading">
+                            Frequently Asked Questions
+                        </h1>
+
+                        <!-- question 1 -->
+                        <div class="faq-question">
+                            <h3>Who should use the app ?</h3>
+                            <i class="fa-solid fa-angle-up"></i>
+                        </div>
+                        <p class="faq-answer">
+                            All our users like the amazing features and
+                            illustration of our app and it effective working
+                            procedure. Most of them are highly satisfied with
+                            our support and collaboration ideas which are
+                            counted as quite an essential in the tech business.
+                            With a team of highly creative and lively developers
+                            and manager, all our issues are promised to be
+                            solved in no time at all.
+                        </p>
+                        <hr />
+
+                        <!-- question 2 -->
+                        <div class="faq-question">
+                            <h3>What is the working procedure of the app ?</h3>
+                            <i class="fa-solid fa-angle-down"></i>
+                        </div>
+                        <hr />
+
+                        <!-- question 3 -->
+                        <div class="faq-question">
+                            <h3>How is the app helpful ?</h3>
+                            <i class="fa-solid fa-angle-down"></i>
+                        </div>
+                        <hr />
+
+                        <!-- question 4 -->
+                        <div class="faq-question">
+                            <h3>
+                                Is the app workable while you got no internet ?
+                            </h3>
+                            <i class="fa-solid fa-angle-down"></i>
+                        </div>
+                        <hr />
+
+                        <!-- question 5 -->
+                        <div class="faq-question">
+                            <h3>What are the security measure of the app ?</h3>
+                            <i class="fa-solid fa-angle-down"></i>
+                        </div>
+                    </section>
+                </section>
+
+                <!-- app-section -->
+                <section id="app-section"></section>
+            </main>
+
+            <!-- footer -->
+        </div>
+
+        <script
+            src="https://kit.fontawesome.com/ee184e410d.js"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>
