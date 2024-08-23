@@ -1,0 +1,136 @@
+.wrapper {
+    width: 100vw;
+    font-family: Open Sans, ui-sans-serif, system-ui, -apple-system,
+        BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans,
+        sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol,
+        "Noto Color Emoji";
+}
+
+/* top content */
+/* ------------------------------------------ */
+
+.top-content {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.top-heading-wrapper,
+.top-grid-wrapper {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.top-heading {
+    font-size: 2.4rem;
+}
+
+.top-grid {
+    width: 80vw;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.top-card {
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .top-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* main content */
+/* ------------------------------------------ */
+
+.main-content {
+    width: 100vw;
+    margin-bottom: 10vh;
+}
+
+.main-header-wrapper,
+.main-grid-wrapper {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-header {
+    font-size: 2rem;
+}
+
+.main-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 1rem;
+    column-gap: 2rem;
+}
+
+.card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(233, 233, 233);
+    border-radius: 0.5rem;
+}
+
+.card-img {
+    margin-top: 0.5rem;
+}
+
+.card-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 0.4rem;
+    background-color: rgb(248, 248, 248);
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+
+.card-name {
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.card-post {
+    text-align: center;
+    opacity: 65%;
+    font-size: 1.05rem;
+}
+
+.card-logo-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-logo {
+    height: 3rem;
+    width: fit-content;
+    margin-top: -0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+@media (min-width: 768px) {
+    .main-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .main-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
