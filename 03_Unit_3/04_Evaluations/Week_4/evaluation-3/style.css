@@ -1,0 +1,309 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --bg-light-brown: #5c4f05;
+    --bg-dark-brown: #121212;
+    --bg-brown: #1c1712;
+    --bg-yellow: #fecc00;
+}
+
+* {
+    @apply m-0 p-0 box-border;
+}
+
+.navbar-wrapper {
+    @apply w-[100vw] flex justify-center items-center;
+    background-image: linear-gradient(
+        to right,
+        var(--bg-dark-brown),
+        var(--bg-brown)
+    );
+}
+
+.navbar {
+    @apply w-[90vw] bg-[--bg-light-brown] text-white flex justify-between items-center px-2 rounded-md my-6;
+}
+
+.navbar-left {
+    @apply flex justify-center items-center;
+}
+
+.nav-logo {
+    @apply w-16;
+}
+
+.logo-header {
+    @apply mr-1 text-yellow-300 font-bold;
+    letter-spacing: 0.13rem;
+}
+
+.logo-subheading {
+    @apply text-[0.6rem] leading-3;
+    letter-spacing: 0.6rem;
+}
+
+.navbar-logo-text {
+    @apply flex flex-col justify-center items-center;
+}
+
+.navbar-right {
+    @apply flex justify-between items-center gap-8;
+}
+
+.nav-btn {
+    @apply bg-yellow-400 text-black px-2 py-2 rounded-md;
+}
+
+.nav-link {
+    @apply hidden sm:inline-block;
+}
+
+/* main section */
+/* --------------------------------------------------------- */
+
+.main-section-wrapper {
+    background-image: linear-gradient(
+        to right,
+        var(--bg-dark-brown),
+        var(--bg-brown)
+    );
+    @apply w-[100vw] flex justify-center items-center pt-12 pb-40;
+}
+
+.main-section {
+    @apply w-[60vw] flex flex-col justify-around items-center gap-8;
+}
+
+.main-section-img {
+    @apply w-[90%];
+}
+
+.main-section-para {
+    @apply text-yellow-50 text-lg text-center w-[90%];
+}
+
+.main-section-btn-wrapper {
+    @apply flex justify-center items-center;
+}
+
+.main-section-btn {
+    @apply bg-yellow-400 rounded-3xl px-5 py-2 font-semibold;
+}
+
+/* product section */
+/* ----------------------------------------------- */
+
+.product-wrapper {
+    background-image: linear-gradient(
+        to right,
+        var(--bg-dark-brown),
+        var(--bg-brown)
+    );
+    @apply w-[100vw] flex justify-center items-center pt-12 pb-40 text-white;
+}
+
+.product {
+    @apply w-[60vw] flex flex-col justify-around items-center gap-8;
+}
+
+.product-header {
+    @apply text-[3rem] font-bold flex flex-col items-end;
+}
+
+.products-yellow {
+    @apply text-yellow-400;
+}
+
+.products-underline {
+    @apply w-[10rem];
+}
+
+.product-para {
+    @apply text-xl;
+}
+
+.product-cards-wrapper {
+    /* @apply w-[100vw] flex flex-row flex-wrap justify-around items-center; */
+    @apply grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4;
+}
+
+.product-card {
+    @apply flex flex-col justify-center items-center gap-4 bg-[--bg-dark-brown] border-2 border-[--bg-light-brown] rounded-xl text-center p-7 col-span-2;
+}
+
+.product-card-4 {
+    @apply lg:col-start-2;
+}
+
+.product-card-5 {
+    @apply md:col-start-2 lg:col-start-4;
+}
+
+.pcard-line {
+    @apply bg-yellow-400 text-yellow-500 h-[0.1rem] w-[50%] text-center mx-auto;
+}
+
+.pcard-logo {
+    @apply w-[60%];
+}
+
+.pcard-heading {
+    @apply font-bold text-lg;
+}
+
+/* roadmap - section */
+/* -------------------------------------------------- */
+
+.roadmap-wrapper {
+    @apply bg-[--bg-yellow] w-[100vw] flex justify-center items-center pt-8 pb-0;
+}
+
+.roadmap {
+    @apply flex flex-col items-start justify-between;
+}
+
+.roadmap-header {
+    @apply flex flex-col items-end text-black font-bold text-[3rem];
+}
+
+.roadmap-header-underline {
+    @apply w-[8rem];
+}
+
+.roadmap-card-wrapper {
+    @apply w-[90vw] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-24 px-8 my-8;
+}
+
+.roadmap-card {
+    @apply text-center;
+}
+
+.rcard-num-img {
+    @apply w-[14rem] mx-auto;
+}
+
+.rcard-content {
+    @apply bg-[--bg-brown] text-white h-full w-full flex flex-col justify-center items-center rounded-3xl;
+}
+
+.rcard-tag {
+    @apply bg-[--bg-yellow] text-black px-2 pt-2 pb-4 rounded-b-3xl;
+}
+
+.rcard-text {
+    @apply bg-[--bg-dark-brown] flex flex-col justify-center items-center gap-4 h-[90%] w-[85%] mb-[5%] px-[8%] border-yellow-800 border-2 rounded-3xl;
+}
+
+.rcard-heading {
+    @apply font-bold text-lg;
+}
+
+.rcard-date {
+    @apply opacity-70;
+}
+
+.rcard-para {
+    @apply opacity-70 text-sm;
+}
+
+/* token section */
+/* ---------------------------------------------------- */
+
+.token-section-wrapper {
+    background-image: linear-gradient(
+        to right,
+        var(--bg-dark-brown),
+        var(--bg-brown)
+    );
+    @apply text-white w-[100vw] flex justify-center items-center pt-40;
+}
+
+.token-section {
+    @apply w-[80vw] flex flex-col justify-center items-center gap-6 mb-20;
+}
+
+.token-header {
+    @apply text-[3rem] flex flex-col items-end font-bold;
+}
+
+.token-para {
+    @apply text-lg;
+}
+
+.token-cards-wrapper {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 w-[80vw] mt-12;
+}
+
+.token-card {
+    @apply bg-[--bg-dark-brown] border-2 border-[--bg-light-brown] rounded-3xl p-4 flex flex-col justify-center items-center;
+}
+
+.tcard-img {
+    @apply w-36;
+}
+
+.tcard-content {
+    @apply w-[90%];
+}
+
+.tcard-heading {
+    @apply text-left text-xl font-bold;
+}
+
+.tcard-table {
+    @apply opacity-70 w-full;
+}
+
+.tcard-row {
+    @apply w-[90%] flex justify-between items-center gap-8 text-left;
+}
+
+/* footer section */
+/* -------------------------------------------------- */
+
+.footer-wrapper {
+    @apply w-[100vw] flex flex-col justify-center items-center text-white;
+    background-image: linear-gradient(
+        to right,
+        var(--bg-dark-brown),
+        var(--bg-brown)
+    );
+}
+
+.footer {
+    @apply w-[80vw] flex flex-col md:flex-row justify-between items-center border-2 border-[--bg-light-brown] p-20 rounded-3xl;
+}
+
+.footer-left {
+    @apply text-[3rem] font-semibold;
+}
+
+.yellow {
+    @apply text-yellow-400;
+}
+
+.footer-right {
+    @apply flex justify-center items-center gap-8;
+}
+
+.footer-link-wrapper {
+    @apply w-8 h-8;
+}
+
+.footer-link {
+    @apply bg-yellow-600 rounded-[100%] p-6 cursor-pointer;
+}
+
+.footer-link-icon {
+    @apply text-white text-3xl;
+}
+
+.footer-logo {
+    @apply w-[7rem] mt-2;
+}
+
+.footer-end {
+    @apply text-xl opacity-70 mt-4 mb-8;
+}
